@@ -75,44 +75,44 @@
   --_animspeed-slow: 0.6s;
   --_animbezier: cubic-bezier(0.23, 0.65, 0.74, 1.09);
   /* light color scheme */
-  --base--light: #e1cfc1;
-  --base-tint--light: #f1bb90;
-  --base-shade--light: #e69b5e;
-  --accent--light: #c41e3a;
-  --secondary--light: #dc3545;
-  --secondary-rgba--light: rgba(223, 222, 232, 0.3);
+  --base--light: #e8e6e3;
+  --base-tint--light: #f3f1ee;
+  --base-shade--light: #d4d0cb;
+  --accent--light: #ee7506;
+  --secondary--light: #ff9a33;
+  --secondary-rgba--light: rgba(238, 117, 6, 0.14);
   --stroke-controls--light: #ffffff;
-  --stroke-controls-neutral--light: rgba(255, 255, 255, 0.3);
-  --stroke-elements--light: #989393;
-  --t-bright--light: #22232c;
-  --t-medium--light: #424550;
-  --t-muted--light: #666a79;
-  --t-accent--light: #c41e3a;
-  --t-secondary--light: #dc3545;
+  --stroke-controls-neutral--light: rgba(255, 255, 255, 0.35);
+  --stroke-elements--light: #b0aaa3;
+  --t-bright--light: #1a1c24;
+  --t-medium--light: #3d4150;
+  --t-muted--light: #60657a;
+  --t-accent--light: #ee7506;
+  --t-secondary--light: #f59e0b;
   --t-disabled--light: #717586;
   --t-placeholder--light: #969bb2;
   --base-opp--light: #111111;
   --t-opp-bright--light: #ebf0f7;
   --t-opp-medium--light: #C7C6D3;
   --t-opp-muted--light: #A1A1AF;
-  --gradient-one--light: #CEC4EF;
-  --gradient-two--light: #f5c5cd;
-  --gradient-three--light: #ac8fe3;
+  --gradient-one--light: #ffc48a;
+  --gradient-two--light: #ffe0b5;
+  --gradient-three--light: #f0a04a;
   /* dark color scheme */
   --base--dark: #111111;
   --base-tint--dark: #161616;
   --base-shade--dark: #000000;
-  --accent--dark: #ff4757;
-  --secondary--dark: #ff6b7a;
-  --secondary-rgba--dark: rgba(206,196,239,0.2);
+  --accent--dark: #ff8c1a;
+  --secondary--dark: #ffb347;
+  --secondary-rgba--dark: rgba(255, 140, 26, 0.16);
   --stroke-controls--dark: #4B4B51;
   --stroke-controls-neutral--dark: rgba(255,255,255,0.3);
   --stroke-elements--dark: #303033;
   --t-bright--dark: #e9e9f1;
   --t-medium--dark: #C7C6D3;
   --t-muted--dark: #A1A1AF;
-  --t-accent--dark: #ff4757;
-  --t-secondary--dark: #ff6b7a;
+  --t-accent--dark: #ff8c1a;
+  --t-secondary--dark: #ffb347;
   --t-disabled--dark: #8B8A91;
   --t-placeholder--dark: #58585E;
   --base-opp--dark: #fafafa;
@@ -120,8 +120,8 @@
   --t-opp-medium--dark: #626577;
   --t-opp-muted--dark: #717586;
   --gradient-one--dark: #ee7506;
-  --gradient-two--dark: #ee7506;
-  --gradient-three--dark: #ee7506;
+  --gradient-two--dark: #ff9a33;
+  --gradient-three--dark: #c45f05;
   /* permanent colors */
   --per-base: #111111;
   --per-base-tint: #212121;
@@ -4418,174 +4418,4 @@ form textarea:required:valid {
 
 /* ------------------------------------------------*/
 /* Features Socials End */
-/* ------------------------------------------------*/
-
-/* ------------------------------------------------*/
-/* Efecto de Nieve Navideña Start */
-/* ------------------------------------------------*/
-.snow-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 9999;
-  overflow: hidden;
-}
-
-.snowflake {
-  position: absolute;
-  color: #ffffff;
-  font-size: 1em;
-  font-family: Arial, sans-serif;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
-  animation: snowfall linear infinite;
-  opacity: 0.9;
-  will-change: transform, opacity;
-}
-
-@keyframes snowfall {
-  0% {
-    transform: translateY(-100px) translateX(0) rotate(0deg);
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.9;
-  }
-  90% {
-    opacity: 0.9;
-  }
-  100% {
-    transform: translateY(calc(100vh + 100px)) translateX(var(--snow-drift, 0px)) rotate(360deg);
-    opacity: 0;
-  }
-}
-/* ------------------------------------------------*/
-/* Efecto de Nieve Navideña End */
-/* ------------------------------------------------*/
-
-/* ------------------------------------------------*/
-/* Botón de Música Flotante Start */
-/* ------------------------------------------------*/
-.music-float-btn {
-  position: fixed;
-  right: 30px;
-  bottom: 80px;
-
-
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  border: none;
-  background: linear-gradient(135deg, #c41e3a 0%, #ff4757 50%, #dc3545 100%);
-  box-shadow: 
-    0 8px 25px rgba(196, 30, 58, 0.4),
-    0 0 0 0 rgba(196, 30, 58, 0.7),
-    inset 0 2px 10px rgba(255, 255, 255, 0.3);
-  cursor: pointer;
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  
-  justify-content: center;
-  transition: all 0.3s ease;
-  animation: floatCircle 3s ease-in-out infinite;
-}
-
-.music-float-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 
-    0 12px 35px rgba(196, 30, 58, 0.5),
-    0 0 0 10px rgba(196, 30, 58, 0.1),
-    inset 0 2px 10px rgba(255, 255, 255, 0.4);
-}
-
-.music-float-btn .music-icon {
-  font-size: 2.5rem;
-  color: #ffffff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.music-float-btn:hover .music-icon {
-  transform: scale(1.1) rotate(5deg);
-}
-
-.music-float-btn.music-playing {
-  animation: floatCircle 2s ease-in-out infinite, pulseGlow 1.5s ease-in-out infinite;
-  box-shadow: 
-    0 8px 25px rgba(255, 71, 87, 0.6),
-    0 0 0 0 rgba(255, 71, 87, 0.7),
-    0 0 30px rgba(255, 71, 87, 0.5),
-    inset 0 2px 10px rgba(255, 255, 255, 0.3);
-}
-
-.music-float-btn.music-playing .music-icon {
-  animation: musicBounce 0.8s ease-in-out infinite;
-}
-
-@keyframes floatCircle {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-}
-
-@keyframes pulseGlow {
-  0%, 100% {
-    box-shadow: 
-      0 8px 25px rgba(255, 71, 87, 0.6),
-      0 0 0 0 rgba(255, 71, 87, 0.7),
-      0 0 30px rgba(255, 71, 87, 0.5),
-      inset 0 2px 10px rgba(255, 255, 255, 0.3);
-  }
-  50% {
-    box-shadow: 
-      0 8px 25px rgba(255, 71, 87, 0.8),
-      0 0 0 15px rgba(255, 71, 87, 0),
-      0 0 50px rgba(255, 71, 87, 0.7),
-      inset 0 2px 10px rgba(255, 255, 255, 0.4);
-  }
-}
-
-@keyframes musicBounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-/* Responsive */
-@media only screen and (max-width: 768px) {
-  .music-float-btn {
-    right: 20px;
-    bottom: 70px;
-    width: 60px;
-    height: 60px;
-  }
-  
-  .music-float-btn .music-icon {
-    font-size: 2rem;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .music-float-btn {
-    right: 15px;
-    bottom: 60px;
-    width: 55px;
-    height: 55px;
-  }
-  
-  .music-float-btn .music-icon {
-    font-size: 1.8rem;
-  }
-}
-/* ------------------------------------------------*/
-/* Botón de Música Flotante End */
 /* ------------------------------------------------*/

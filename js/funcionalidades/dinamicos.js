@@ -37,10 +37,49 @@
         let proyectosMostrados = 0;
         const totalProyectos = portafolioData.length;
 
+        const techCatalog = {
+            html: { label: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+            css: { label: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+            js: { label: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+            javascript: { label: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+            php: { label: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
+            laravel: { label: "Laravel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" },
+            react: { label: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+            "react native": { label: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+            "next js": { label: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+            "next.js": { label: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+            nextjs: { label: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+            mysql: { label: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+            "prisma-mysql": { label: "Prisma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg" },
+            angular: { label: "Angular", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" },
+            tailwind: { label: "Tailwind", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+            expo: { label: "Expo", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/expo/expo-original.svg" },
+            supabase: { label: "Supabase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" },
+            typescript: { label: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+            nodejs: { label: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+            "node.js": { label: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" }
+        };
+
+        function renderTechPill(tecnologia) {
+            const key = String(tecnologia || "").trim().toLowerCase();
+            const tech = techCatalog[key];
+            const label = tech ? tech.label : String(tecnologia || "").trim();
+            const icon = tech && tech.icon
+                ? `<img class="tech-pill__icon" src="${tech.icon}" alt="" width="16" height="16" loading="lazy" onerror="this.remove()" />`
+                : "";
+
+            return `<span class="tech-pill">${icon}<span class="tech-pill__label">${label}</span></span>`;
+        }
+
         // Función para crear un elemento de proyecto
         function crearProyecto(item) {
             const figure = document.createElement("figure");
             figure.className = "col-12 col-md-6 gallery__item grid-item animate-card-2";
+
+            const titulo = item.titulo || "Proyecto";
+            const tecnologias = (item.tecnologias || [])
+                .map((tecnologia) => renderTechPill(tecnologia))
+                .join("");
 
             figure.innerHTML = `
                 <a
@@ -53,17 +92,18 @@
                     <img
                         src="${item.imagenGrande}"
                         class="gallery__image"
-                        alt="${item.alt}"
+                        alt="${item.alt || titulo}"
+                        loading="lazy"
                     />
                 </a>
                 <figcaption class="gallery__descr opposite">
-                    <h5 class="opposite">Descripción</h5>
+                    <h5 class="opposite">${titulo}</h5>
                     <div class="card__tags d-flex flex-wrap">
-                        ${item.tecnologias.map(tecnologia => `<span class="rounded-tag">${tecnologia}</span>`).join('')}
+                        ${tecnologias}
                     </div>
                     <p class="small">
                         ${item.descripcion}
-                        <a href="${item.link}" class="text-link-enlace" target="_blank">Visita el sitio</a>
+                        <a href="${item.link}" class="text-link-enlace" target="_blank" rel="noopener noreferrer">Ver sitio</a>
                     </p>
                 </figcaption>
             `;
@@ -108,10 +148,10 @@
         if (totalProyectos > proyectosPorPagina) {
             const contenedorPadre = contenedor.parentElement;
             const btnContainer = document.createElement("div");
-            btnContainer.className = "text-center mt-4";
+            btnContainer.className = "portfolio-load-more";
             btnContainer.innerHTML = `
-                <button id="btn-cargar-mas" class="btn btn-primary">
-                    Cargar más proyectos
+                <button id="btn-cargar-mas" class="btn btn-default btn-hover btn-hover-accent" type="button">
+                    <span class="btn-caption">Cargar más proyectos</span>
                 </button>
             `;
             contenedorPadre.appendChild(btnContainer);
@@ -196,7 +236,7 @@
             "CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
             "JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
             "PHP": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-            "Laravel": "https://logospng.org/download/laravel/logo-laravel-icon-1024.png",
+            "Laravel": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
             "React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
             "React Native": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
             "Next.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
@@ -259,21 +299,21 @@
             const categoryItemsDiv = document.createElement("div");
             categoryItemsDiv.className = "skills-category__items row";
 
-            // Agregar skills de esta categoría
+            // Agregar skills de esta categoría (estilo original del portafolio)
             category.forEach(item => {
                 const div = document.createElement("div");
                 div.className = "tools-cards__item d-flex grid-item-s animate-card-5";
 
                 const iconUrl = techIcons[item.skill] || null;
-                const iconHtml = iconUrl 
-                    ? `<img class="tools-cards__icon animate-in-up" src="${iconUrl}" alt="${item.skill}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />`
-                    : '';
+                const iconHtml = iconUrl
+                    ? `<img class="tools-cards__icon animate-in-up" src="${iconUrl}" alt="${item.skill}" loading="lazy" onerror="this.style.display='none'" />`
+                    : "";
 
                 div.innerHTML = `
                     <div class="tools-cards d-flex justify-content-start flex-wrap">
                         <div class="tools-cards__card">
                             ${iconHtml}
-                            <h6 class="tools-cards__caption animate-in-up" ${!iconUrl ? 'style="display:block;"' : ''}>${item.skill}</h6>
+                            <h6 class="tools-cards__caption animate-in-up">${item.skill}</h6>
                         </div>
                     </div>
                 `;

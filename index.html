@@ -51,13 +51,14 @@
     <link rel="stylesheet" href="css/loaders/loader.css" />
     <link rel="stylesheet" type="text/css" href="css/plugins.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/polish.css" />
     <!-- Fin de Estilos de la Plantilla -->
 
     <!-- Inicio de Color Personalizado del Navegador -->
     <meta
       name="theme-color"
       media="(prefers-color-scheme: light)"
-      content="#dcdce7"
+      content="#e8e6e3"
     />
     <meta
       name="theme-color"
@@ -85,9 +86,9 @@
                 <i class="ph-bold ph-house-simple"></i>
               </a>
             </li>
-            <li class="menu__item">
+              <li class="menu__item">
               <a class="menu__link btn" href="#about">
-                <span class="menu__caption">Sobre mi</span>
+                <span class="menu__caption">Sobre mí</span>
                 <i class="ph-bold ph-squares-four"></i>
               </a>
             </li>
@@ -127,7 +128,7 @@
         <a
           id="notify-trigger"
           class="header__trigger btn"
-          href="mailto:example@example.com?subject=Message%20from%20your%20site"
+          href="mailto:smithelunico123@gmail.com?subject=Mensaje%20desde%20tu%20portafolio"
         >
           <span class="trigger__caption">Hablemos</span>
           <i class="ph-bold ph-chat-dots"></i>
@@ -137,29 +138,89 @@
     </header>
     <!-- Fin del Encabezado -->
 
-    <!-- Inicio del Bloque Lateral del Avatar -->
+    <!-- Presentación izquierda -->
     <div id="avatar" class="avatar">
-      <div
-        class="avatar__container d-flex flex-column justify-content-lg-between"
-      >
-        <!-- Imagen y Logo -->
-        <div class="avatar__block">
+      <div id="about" class="avatar__container d-flex flex-column">
+        <div class="avatar__block avatar__block--media">
           <div class="avatar__image">
             <img
               src="img/avatars/perfilazo.jpeg"
-              alt="Bryan Smith Coronado Santi"
+              alt="Bryan Coronado"
             />
           </div>
+          <div class="avatar__status">
+            <span class="avatar__status-dot" aria-hidden="true"></span>
+            Disponible para proyectos
+          </div>
         </div>
-        <!-- Subtítulo de Datos #1 -->
-        <div class="avatar__block">
-          <h6>
-            <small class="top">Especializacion:</small>
-            Desarrollador Full Stack
-          </h6>
+
+        <div class="avatar__block avatar__block--info">
+          <p class="avatar__eyebrow">Sobre mí</p>
+          <h2 class="avatar__headline">
+            Sistemas, automatizaciones y productos digitales
+          </h2>
+          <p class="avatar__bio">
+            Full Stack en sistemas y automatizaciones: web, APIs, CRM y WhatsApp. Soluciones listas para crecer, con código claro y mantenible.
+          </p>
         </div>
-        <!-- Redes Sociales y Botón CTA -->
-        <div class="avatar__block">
+
+        <div class="avatar__block avatar__block--stats">
+          <div class="avatar__stat">
+            <strong>+3</strong>
+            <span>Años creando</span>
+          </div>
+          <div class="avatar__stat">
+            <strong>Full Stack</strong>
+            <span>Web y apps</span>
+          </div>
+          <div class="avatar__stat">
+            <strong>Remoto</strong>
+            <span>Disponible</span>
+          </div>
+        </div>
+
+        <div class="avatar__block avatar__block--stack">
+          <p class="avatar__eyebrow">Stack principal</p>
+          <div class="avatar__pills">
+            <span>React</span>
+            <span>Laravel</span>
+            <span>Node.js</span>
+            <span>MySQL</span>
+            <span>n8n</span>
+            <span>WhatsApp API</span>
+          </div>
+        </div>
+
+        <div class="avatar__block avatar__block--focus">
+          <p class="avatar__eyebrow">Enfoque</p>
+          <ul class="avatar__focus-list">
+            <li>APIs y automatizaciones</li>
+            <li>CRM y sistemas a medida</li>
+            <li>Productos listos para escalar</li>
+            <li>Administración y configuración de servidores</li>
+          </ul>
+        </div>
+
+        <div class="avatar__block avatar__block--details">
+          <div class="avatar__detail">
+            <small>Nombre</small>
+            <span>Bryan Coronado</span>
+          </div>
+          <div class="avatar__detail">
+            <small>Celular</small>
+            <a href="tel:+51901064562">+51 901 064 562</a>
+          </div>
+          <div class="avatar__detail">
+            <small>Correo</small>
+            <a href="mailto:smithelunico123@gmail.com?subject=Mensaje%20desde%20tu%20portafolio">smithelunico123@gmail.com</a>
+          </div>
+          <div class="avatar__detail">
+            <small>Ubicación</small>
+            <a href="https://maps.app.goo.gl/xMJXTEUeHkv6kYRQ6" target="_blank" rel="noopener noreferrer">Lima, Perú</a>
+          </div>
+        </div>
+
+        <div class="avatar__block avatar__block--actions">
           <div class="avatar__socials">
             <ul class="socials-square d-flex justify-content-between">
               <li class="socials-square__item">
@@ -167,6 +228,8 @@
                   class="socials-square__link btn"
                   href="https://www.linkedin.com/in/bryan-smith-coronado-santi-387024233/"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
                   ><i class="ph-bold ph-linkedin-logo"></i></a>
               </li>
               <li class="socials-square__item">
@@ -174,6 +237,8 @@
                   class="socials-square__link btn"
                   href="https://github.com/CoronadoBryan"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
                   ><i class="ph-bold ph-github-logo"></i></a>
               </li>
               <li class="socials-square__item">
@@ -181,6 +246,8 @@
                   class="socials-square__link btn"
                   href="https://www.instagram.com/"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
                   ><i class="ph-bold ph-instagram-logo"></i></a>
               </li>
               <li class="socials-square__item">
@@ -188,6 +255,8 @@
                   class="socials-square__link btn"
                   href="https://wa.me/51901064562?text=Hola%20Bryan%2C%20vengo%20de%20tu%20p%C3%A1gina%20web"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp"
                   ><i class="ph-bold ph-whatsapp-logo"></i></a>
               </li>
             </ul>
@@ -196,15 +265,14 @@
             <a
               class="btn btn-default btn-fullwidth btn-hover btn-hover-accent"
               href="#contact"
-              target="_blank"
             >
-              <span class="btn-caption">Contactame !</span>
+              <span class="btn-caption">Contáctame</span>
             </a>
           </div>
         </div>
       </div>
     </div>
-    <!-- Fin del Bloque Lateral del Avatar -->
+    <!-- Fin presentación izquierda -->
 
     <!-- Inicio del Contenido de la Página -->
     <div id="content" class="content">
@@ -234,24 +302,25 @@
                   C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"
                 />
               </svg>
-              <span>Conoceme!</span>
+              <span>Conóceme</span>
             </p>
             <h1 class="headline__title animate-headline">
-              Hola soy Bryan Coronado<br />Desarrollador web
+              Hola, soy Bryan Coronado<br />Desarrollador Full Stack
             </h1>
             <div class="headline__btnholder d-flex flex-column flex-sm-row">
               <a
                 class="btn mobile-vertical btn-default btn-hover btn-hover-accent-mobile animate-headline"
                 href="#portfolio"
               >
-                <span class="btn-caption">Mis Proyectos</span>
+                <span class="btn-caption">Mis proyectos</span>
                 <i class="ph-bold ph-squares-four"></i>
               </a>
               <a
                 class="btn mobile-vertical btn-default btn-hover btn-hover-outline-mobile animate-headline"
-                href="https://bryancito.space/documents/cv.pdf"
+                href="documents/cv-2026.pdf"
+                download="cv-2026.pdf"
               >
-                <span class="btn-caption" id="download-cv" >Descargar mi  CV</span>
+                <span class="btn-caption" id="download-cv">Descargar CV</span>
                 <i class="ph-bold ph-download-simple"></i>
               </a>
             </div>
@@ -260,8 +329,8 @@
         </section>
         <!-- Fin de la Sección de Introducción -->
 
-        <section id="about" class="inner about">
-          <!-- Inicio del Bloque de Contenido - Título de Sección H2 -->
+        <!-- Inicio de la Sección de Portafolio -->
+        <section id="portfolio" class="inner inner-first portfolio">
           <div class="content__block section-grid-title">
             <p class="h2__subtitle animate-in-up">
               <svg
@@ -280,128 +349,21 @@
                   C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"
                 />
               </svg>
-              <span>Sobre mi</span>
+              <span>Portafolio</span>
             </p>
-            <h2 class="h2__title animate-in-up">
-              Desarrollador Full Stack especializado en sistemas y automatizaciones
-            </h2>
+            <h2 class="h2__title animate-in-up">Proyectos seleccionados</h2>
           </div>
-          <!-- Fin del Bloque de Contenido - Título de Sección H2 -->
 
-          <!-- Inicio del Bloque de Contenido - Datos Sobre Mí -->
-          <div class="content__block grid-block">
-            <div class="container-fluid p-0">
-              <div class="row g-0 justify-content-between">
-                <!-- Inicio de la Descripción Sobre Mí -->
-                <div class="col-12 col-xl-8 grid-item about-descr">
-                  <p class="about-descr__text animate-in-up">
-                    Soy un desarrollador Full Stack especializado en crear sistemas completos y soluciones automatizadas que optimizan procesos empresariales. Mi experiencia abarca desde el desarrollo de aplicaciones web hasta la implementación de flujos de trabajo automatizados.
-                  </p>
-                  <p class="about-descr__text animate-in-up">
-                    Me especializo en el diseño y desarrollo de sistemas integrales, desde la arquitectura de bases de datos hasta interfaces de usuario intuitivas. Cada solución que desarrollo está pensada para escalar y evolucionar con las necesidades del negocio.
-                  </p>
-                  <div class="btn-group about-descr__btnholder animate-in-up">
-                    <a
-                      class="btn mobile-vertical btn-default btn-hover btn-hover-accent"
-                      href="https://bryancito.space/documents/cv.pdf"
-                    >
-                      <span id="download-cv2" class="btn-caption">Download CV</span>
-                      <i class="ph-bold ph-download-simple"></i>
-                    </a>
-                  </div>
-                </div>
-                <!-- Fin de la Descripción Sobre Mí -->
-
-                <!-- Inicio de la Información Sobre Mí -->
-                <div class="col-12 col-xl-4 grid-item about-info">
-                  <div class="about-info__item animate-in-up">
-                    <h6>
-                      <small class="top">Nombre</small>
-                      Bryan Coronado
-                    </h6>
-                  </div>
-                  <div class="about-info__item animate-in-up">
-                    <h6>
-                      <small class="top">Celular</small>
-                      <a class="text-link-bold" href="tel:+51901064562"
-                        >+51 901064562</a
-                      >
-                    </h6>
-                  </div>
-                  <div class="about-info__item animate-in-up">
-                    <h6>
-                      <small class="top">Correo</small>
-                      <a
-                        class="text-link-bold"
-                        href="smithelunico123@gmail.com?subject=Message%20from%20your%20site"
-                        >smithelunico123@gmail.com</a
-                      >
-                    </h6>
-                  </div>
-                  <div class="about-info__item animate-in-up">
-                    <h6>
-                      <small class="top">Location</small>
-                      <a
-                        class="text-link-bold"
-                        href="https://maps.app.goo.gl/xMJXTEUeHkv6kYRQ6"
-                        target="_blank"
-                        >Lima, Peru</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <!-- Fin de la Información Sobre Mí -->
-              </div>
-            </div>
-          </div>
-          <!-- Fin del Bloque de Contenido - Datos Sobre Mí -->
-        </section>
-        <!-- Inicio de la Sección de Portafolio -->
-        <section id="portfolio" class="inner inner-first portfolio">
-          <!-- Inicio del Bloque de Contenido - Título de Sección H2 -->
-                  <div class="content__block section-grid-title">
-                    <p class="h2__subtitle animate-in-up">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        x="0px"
-                        y="0px"
-                        width="13px"
-                        height="13px"
-                        viewBox="0 0 13 13"
-                        fill="currentColor"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
-                          C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
-                          C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"
-                        />
-                      </svg>
-                      <span>Portafolio</span>
-                    </p>
-                    <h2 class="h2__title animate-in-up">
-                      Mira mis proyectos
-                    </h2>
-          </div>
-          <!-- Fin del Bloque de Contenido - Título de Sección H2 -->
-
-          <!-- Portafolio Dinámico -->
           <div class="content__block grid-block">
             <div class="container-fluid px-0 inner__gallery">
-              <div class="row gx-0 my-gallery">
-                <div id="contenedor" class="row"></div>
-              </div>
+              <div id="contenedor" class="row gx-0 my-gallery"></div>
             </div>
           </div>
         </section>
         <!-- Fin de la Sección de Portafolio -->
 
-
-
-
         <!-- Inicio de la Sección de Resumen -->
         <section id="resume" class="inner resume">
-          <!-- Inicio del Bloque de Contenido - Título de Sección H2 -->
           <div class="content__block block-large">
             <p class="h2__subtitle animate-in-up">
               <svg
@@ -420,71 +382,55 @@
                   C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"
                 />
               </svg>
-              <span>resumen</span>
+              <span>Resumen</span>
             </p>
             <h2 class="h2__title animate-in-up">
-              Mi educación y experiencia practica
+              Educación y experiencia
             </h2>
             <p class="h2__text animate-in-up">
-              Mi camino se define por el aprendizaje constante. Cada experiencia y desafío me impulsa a crecer,
-              adaptarme y mejorar continuamente, siempre buscando nuevas formas de superarme.
+              Aprendo en cada proyecto. Cada desafío me ayuda a construir mejor, adaptar y entregar con más claridad.
             </p>
           </div>
           <!-- Fin del Bloque de Contenido - Título de Sección H2 -->
 
           <!-- Inicio del Bloque de Contenido - Educación -->
           <div class="content__block block-large">
-            <!-- Inicio del Bloque H3 -->
             <div class="section-h3">
-              <h3 class="h3__title animate-in-up">Mi educación</h3>
+              <h3 class="h3__title animate-in-up">Educación</h3>
             </div>
-            <!-- Fin del Bloque H3 -->
 
-            <!-- Inicio de las Líneas de Educación -->
             <div class="container-fluid p-0 resume-lines">
-
               <div id="contenedor_educacion"></div>
             </div>
-            <!-- Fin de las Líneas de Educación -->
           </div>
           <!-- Fin del Bloque de Contenido - Educación -->
 
           <!-- Inicio del Bloque de Contenido - Experiencia -->
           <div class="content__block block-large">
-            <!-- Inicio del Bloque H3 -->
             <div class="section-h3">
-              <h3 class="h3__title animate-in-up">Mi experiencia</h3>
+              <h3 class="h3__title animate-in-up">Experiencia</h3>
             </div>
-            <!-- Fin del Bloque H3 -->
 
-            <!-- Inicio de las Líneas de Experiencia -->
             <div class="container-fluid p-0 resume-lines">
-
               <div id="contenedor_experiencia"></div>
             </div>
-            <!-- Fin de las Líneas de Experiencia -->
           </div>
           <!-- Fin del Bloque de Contenido - Experiencia -->
 
-          <!-- Inicio del Bloque de Contenido - Bloque H3 -->
           <div class="content__block">
             <div class="section-h3 section-h3-grid">
-              <h3 class="h3__title animate-in-up">Mis Skills</h3>
+              <h3 class="h3__title animate-in-up">Skills</h3>
             </div>
           </div>
-          <!-- Fin del Bloque de Contenido - Bloque H3 -->
 
-          <!-- Inicio del Bloque de Contenido - Lista de Herramientas -->
           <div class="content__block grid-block">
             <div id="contenedor_skills" class="row"></div>
           </div>
-          <!-- Fin del Bloque de Contenido - Lista de Herramientas -->
         </section>
         <!-- Fin de la Sección de Resumen -->
 
         <!-- Inicio de la Sección de Contacto -->
         <section id="contact" class="inner contact">
-          <!-- Inicio del Bloque de Contenido - Título de Sección H2 -->
           <div class="content__block section-title">
             <p class="h2__subtitle animate-in-up">
               <svg
@@ -503,19 +449,16 @@
                   C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"
                 />
               </svg>
-              <span>Contact</span>
+              <span>Contacto</span>
             </p>
             <h2 class="h2__title animate-in-up">
-              Contáctame para trabajar juntos
+              ¿Hablamos de tu próximo proyecto?
             </h2>
           </div>
-          <!-- Fin del Bloque de Contenido - Título de Sección H2 -->
 
-          <!-- Inicio del Bloque de Contenido - Datos de Contacto -->
           <div class="content__block">
             <div class="container-fluid p-0 contact-lines animate-in-up">
               <div class="row g-0 contact-lines__item">
-                <!-- Elemento de Datos -->
                 <div class="col-12 col-md-4 contact-lines__data">
                   <p class="contact-lines__title animate-in-up">Ubicación</p>
                   <p class="contact-lines__text animate-in-up">
@@ -523,26 +466,25 @@
                       class="text-link-bold"
                       href="https://maps.app.goo.gl/xMJXTEUeHkv6kYRQ6"
                       target="_blank"
+                      rel="noopener noreferrer"
                       >Lima, Perú</a
                     >
                   </p>
                 </div>
-                <!-- Elemento de Datos -->
                 <div class="col-12 col-md-4 contact-lines__data">
                   <p class="contact-lines__title animate-in-up">Teléfono</p>
                   <p class="contact-lines__text animate-in-up">
                     <a class="text-link-bold" href="tel:+51901064562"
-                      >+51 901064562</a
+                      >+51 901 064 562</a
                     >
                   </p>
                 </div>
-                <!-- Elemento de Datos -->
                 <div class="col-12 col-md-4 contact-lines__data">
                   <p class="contact-lines__title animate-in-up">Correo</p>
                   <p class="contact-lines__text animate-in-up">
                     <a
                       class="text-link-bold"
-                      href="mailto:smithelunico123@gmail.com?subject=Message%20from%20your%20site"
+                      href="mailto:smithelunico123@gmail.com?subject=Mensaje%20desde%20tu%20portafolio"
                       >smithelunico123@gmail.com</a
                     >
                   </p>
@@ -550,22 +492,11 @@
               </div>
             </div>
           </div>
-          <!-- Fin del Bloque de Contenido - Datos de Contacto -->
         </section>
         <!-- Fin de la Sección de Contacto -->
       </div>
     </div>
     <!-- Fin del Contenido de la Página -->
-
-    <!-- Botón de Música Flotante -->
-    <button
-      id="music-toggle"
-      class="music-float-btn"
-      type="button"
-      aria-label="Activar música navideña"
-    >
-      <i class="ph-bold ph-music-note music-icon"></i>
-    </button>
 
     <!-- Elemento raíz de PhotoSwipe. Debe tener la clase pswp. -->
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -652,10 +583,6 @@
     <script src="js/funcionalidades/downloadCv.js"></script>
     <script src="js/funcionalidades/dinamicos.js"></script>
     <script src="js/gallery-init.js"></script>
-    <!-- Efecto de Nieve -->
-    <script src="js/snow.js"></script>
-    <!-- Música Navideña -->
-    <script src="js/christmas-music.js"></script>
     <!-- Fin de Carga de Scripts -->
   </body>
 </html>
